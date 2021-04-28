@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="572.0" prefWidth="1022.0" scaleZ="2.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="concurrency.Index">
+   <top>
+      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="60.0" prefWidth="1022.0" style="-fx-background-color: #009688;" text="Concurrency and Deadlock" textFill="WHITE" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="Verdana Bold" size="36.0" />
+         </font>
+      </Label>
+   </top>
+   <center>
+      <AnchorPane maxHeight="-Infinity" prefHeight="511.0" prefWidth="1022.0" style="-fx-background-color: #F5F5DC;" BorderPane.alignment="CENTER">
+         <children>
+            <TabPane maxHeight="490.0" minHeight="-Infinity" prefHeight="471.0" prefWidth="1022.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Concurrency">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="406.0" prefWidth="1022.0">
+                           <children>
+                              <Pane layoutX="14.0" layoutY="14.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="238.0" style="-fx-background-color: #FFFFFF;">
+                                 <children>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="239.0" style="-fx-background-color: #009688 F1F1F2EB;" text="Lock Variable" textAlignment="CENTER" textFill="WHITE">
+                                       <font>
+                                          <Font name="Verdana Italic" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Button layoutX="14.0" layoutY="74.0" mnemonicParsing="false" onAction="#infoLock" text="Info" />
+                                    <Button layoutX="175.0" layoutY="74.0" mnemonicParsing="false" onAction="#demoLock" text="Demo" />
+                                 </children>
+                              </Pane>
+                              <Pane layoutX="392.0" layoutY="14.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="238.0" style="-fx-background-color: #FFFFFF;">
+                                 <children>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="239.0" style="-fx-background-color: #009688 F1F1F2EB;" text="Test and Set Lock" textAlignment="CENTER" textFill="WHITE">
+                                       <font>
+                                          <Font name="Verdana Italic" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Button layoutX="14.0" layoutY="74.0" mnemonicParsing="false" onAction="#infoTest" text="Info" />
+                                    <Button layoutX="175.0" layoutY="74.0" mnemonicParsing="false" onAction="#demoTest" text="Demo" />
+                                 </children>
+                              </Pane>
+                              <Pane layoutX="769.0" layoutY="14.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="238.0" style="-fx-background-color: #FFFFFF;">
+                                 <children>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="239.0" style="-fx-background-color: #009688 F1F1F2EB;" text="Turn Variable" textAlignment="CENTER" textFill="WHITE">
+                                       <font>
+                                          <Font name="Verdana Italic" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Button layoutX="14.0" layoutY="74.0" mnemonicParsing="false" onAction="#infoTurn" text="Info" />
+                                    <Button layoutX="175.0" layoutY="74.0" mnemonicParsing="false" onAction="#demoTurn" text="Demo" />
+                                 </children>
+                              </Pane>
+                              <Pane layoutX="14.0" layoutY="171.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="238.0" style="-fx-background-color: #FFFFFF;">
+                                 <children>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="239.0" style="-fx-background-color: #009688 F1F1F2EB;" text="Interested Variable" textAlignment="CENTER" textFill="WHITE">
+                                       <font>
+                                          <Font name="Verdana Italic" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Button layoutX="14.0" layoutY="74.0" mnemonicParsing="false" onAction="#infoInterest" text="Info" />
+                                    <Button layoutX="175.0" layoutY="74.0" mnemonicParsing="false" onAction="#demoInterest" text="Demo" />
+                                 </children>
+                              </Pane>
+                              <Pane layoutX="392.0" layoutY="171.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="238.0" style="-fx-background-color: #FFFFFF;">
+                                 <children>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="239.0" style="-fx-background-color: #009688 F1F1F2EB;" text="Petersonś Algorithm" textAlignment="CENTER" textFill="WHITE">
+                                       <font>
+                                          <Font name="Verdana Italic" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Button layoutX="14.0" layoutY="74.0" mnemonicParsing="false" onAction="#infoPete" text="Info" />
+                                    <Button layoutX="175.0" layoutY="74.0" mnemonicParsing="false" onAction="#demoPete" text="Demo" />
+                                 </children>
+                              </Pane>
+                              <Pane layoutX="769.0" layoutY="171.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="238.0" style="-fx-background-color: #FFFFFF;">
+                                 <children>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="239.0" style="-fx-background-color: #009688 F1F1F2EB;" text="Binary Semaphore" textAlignment="CENTER" textFill="WHITE">
+                                       <font>
+                                          <Font name="Verdana Italic" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Button layoutX="14.0" layoutY="74.0" mnemonicParsing="false" onAction="#infoBinary" text="Info" />
+                                    <Button layoutX="175.0" layoutY="74.0" mnemonicParsing="false" onAction="#demoBinary" text="Demo" />
+                                 </children>
+                              </Pane>
+                              <Pane layoutX="252.0" layoutY="319.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="238.0" style="-fx-background-color: #FFFFFF;">
+                                 <children>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="239.0" style="-fx-background-color: #009688 F1F1F2EB;" text="Counting Semaphore" textAlignment="CENTER" textFill="WHITE">
+                                       <font>
+                                          <Font name="Verdana Italic" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Button layoutX="14.0" layoutY="73.0" mnemonicParsing="false" onAction="#infoCounting" text="Info" />
+                                    <Button layoutX="175.0" layoutY="74.0" mnemonicParsing="false" onAction="#demoCounting" text="Demo" />
+                                 </children>
+                              </Pane>
+                              <Pane layoutX="530.0" layoutY="319.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="238.0" style="-fx-background-color: #FFFFFF;">
+                                 <children>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="239.0" style="-fx-background-color: #009688 F1F1F2EB;" text="Compare All" textAlignment="CENTER" textFill="WHITE">
+                                       <font>
+                                          <Font name="Verdana Italic" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Button layoutX="95.0" layoutY="74.0" mnemonicParsing="false" onAction="#demoCompare" text="Open" />
+                                 </children>
+                              </Pane>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="Deadlock">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Pane layoutX="308.0" layoutY="153.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="134.0" prefWidth="405.0" style="-fx-background-color: #FFFFFF;">
+                                 <children>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="33.0" prefWidth="406.0" style="-fx-background-color: #009688 F1F1F2EB;" text="Bankerś Algorithm" textAlignment="CENTER" textFill="WHITE">
+                                       <font>
+                                          <Font name="Verdana Italic" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Button layoutX="14.0" layoutY="99.0" mnemonicParsing="false" onAction="#infoBanker" prefHeight="25.0" prefWidth="70.0" text="Info" />
+                                    <Button layoutX="321.0" layoutY="99.0" mnemonicParsing="false" onAction="#demoBanker" prefHeight="25.0" prefWidth="70.0" text="Demo" />
+                                 </children>
+                              </Pane>
+                           </children></AnchorPane>
+                  </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+            <Button layoutX="967.0" layoutY="471.0" mnemonicParsing="false" onAction="#backToHome" text="Back" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

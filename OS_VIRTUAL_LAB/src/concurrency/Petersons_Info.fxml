@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="572.0" prefWidth="1022.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="concurrency.Info">
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextArea editable="false" prefHeight="572.0" prefWidth="1022.4" text="Peterson’s Algorithm:&#10;&#10;This is a software mechanism implemented at user mode. It is a busy waiting solution can be implemented for only two processes. It uses two variables that are turn variable and interested variable.&#10;The Code of the solution is given below&#10;&#10;Algorithm:&#10;&#10;# define N 2   &#10;# define TRUE 1  &#10;# define FALSE 0   &#10;int interested[N] = FALSE;  &#10;int turn;   &#10;voidEntry_Section (int process)   &#10;{  &#10;    int other;   &#10;    other = 1-process;  &#10;    interested[process] = TRUE;  &#10;    turn = process;   &#10;    while (interested [other] =True &amp;&amp; TURN=process);  &#10;}  &#10;voidExit_Section (int process)  &#10;{  &#10;    interested [process] = FALSE;  &#10;}  &#10;&#10;Till now, each of our solution is affected by one or the other problem. However, the Peterson solution provides you all the necessary requirements such as Mutual Exclusion, Progress, Bounded Waiting and Portability.&#10;This is a two process solution. Let us consider two cooperative processes P1 and P2. The entry section and exit section are shown below. Initially, the value of interested variables and turn variable is 0.&#10;&#10;Initially process P1 arrives and wants to enter into the critical section. It sets its interested variable to True (instruction line 3) and also sets turn to 1 (line number 4). Since the condition given in line number 5 is completely satisfied by P1 therefore it will enter in the critical section.&#10;P1 → 1 2 3 4 5 CS   &#10;&#10;Meanwhile, Process P1 got preempted and process P2 got scheduled. P2 also wants to enter in the critical section and executes instructions 1, 2, 3 and 4 of entry section. On instruction 5, it got stuck since it doesn't satisfy the condition &#10;P2 → 1 2 3 4 5   &#10;&#10;P1 again got scheduled and finish the critical section by executing the instruction no. 6 (setting interested variable to false). Now if P2 checks then it are going to satisfy the condition since other process's interested variable becomes false. P2 will also get enter the critical section.&#10;P1 → 6   &#10;P2 → 5 CS  &#10;&#10;Any of the process may enter in the critical section for multiple numbers of times. Hence the procedure occurs in the cyclic order.&#10;&#10;Mutual Exclusion:&#10;The method provides mutual exclusion for sure. In entry section, the while condition involves the criteria for two variables therefore a process cannot enter in the critical section until the other process is interested and the process is the last one to update turn variable.&#10;&#10;Progress:&#10;An uninterested process will never stop the other interested process from entering in the critical section. If the other process is also interested then the process will wait.&#10;&#10;Bounded waiting:&#10;The interested variable mechanism failed because it was not providing bounded waiting. However, in Peterson solution, A deadlock can never happen because the process which first sets the turn variable will enter in the critical section for sure. Therefore, if a process is preempted after executing line number 4 of the entry section then it will definitely get into the critical section in its next chance.&#10;&#10;Portability:&#10;This is the complete software solution and therefore it is portable on every hardware.&#10;" wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font name="Verdana Italic" size="14.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </TextArea>
+            <Button layoutX="951.0" layoutY="472.0" mnemonicParsing="false" onAction="#backToIndex" text="Back" />
+         </children>
+      </AnchorPane>
+   </center>
+   <top>
+      <Label alignment="CENTER" prefHeight="60.0" prefWidth="1022.0" style="-fx-background-color: #009688;" text="Petersonś Algorithm" textFill="WHITE" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="Verdana Bold" size="36.0" />
+         </font>
+      </Label>
+   </top>
+</BorderPane>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="572.0" prefWidth="1022.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="concurrency.Info">
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080;" BorderPane.alignment="CENTER">
+         <children>
+            <TextArea editable="false" prefHeight="572.0" prefWidth="1022.4" style="-fx-background-color: #808080;" text="Interested Variable:&#10;&#9;• In the turn variable mechanism, progress was not provided due to the fact that the process which doesn't want to enter in the critical section does not consider the other interested process as well.&#10;&#9;• The other process will also have to wait regardless of the fact that there is no one inside the critical section. If the operating system can make use of an extra variable along with the turn variable then this problem can be solved and our problem can provide progress to most of the extent.&#10;&#9;• Interest variable is a synchronization mechanism that provides synchronization among two processes.&#10;&#9;• It uses an interest variable to provide the synchronization.&#10;&#9;• Interested variable mechanism makes use of an extra Boolean variable to make sure that the progress is provided. &#10;&#10;For Process Pi&#9;&#10;Non CS   &#10;Int[i] = T ;  &#10;while ( Int[j] == T ) ;   &#10;Critical Section  &#10;Int[i] = F ;&#10;  &#10;For Process Pj&#10;Non CS  &#10;Int [1] = T ;  &#10;while ( Int[i] == T ) ;   &#10;Critical Section   &#10;Int[j]=F ;  &#10; &#10;• A process which wants to enter in the critical section first checks in the entry section whether the other process is interested to get inside. The process will wait for the time until the other process is interested.&#10;• In exit section, the process makes the value of its interest variable false so that the other process can get into the critical section.&#10;• The table shows the possible values of interest variable of both the processes and the process which get the chance in the scenario.&#10;&#10;|&#9;Interest [Pi]&#9;|&#9;Interest [Pj]&#9;|&#9;Process which get the chance&#9;&#9;&#9;|&#10;----------------------------------------------------------------------------------------------------------&#10;|&#9;True&#9;&#9;&#9;|&#9;True&#9;&#9;&#9;|&#9;The process which first shows interest.&#9;&#9;|&#9;&#10;|&#9;True&#9;&#9;&#9;|&#9;False&#9;&#9;&#9;|&#9;Pi&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;|&#10;|&#9;False&#9;&#9;&#9;|&#9;True&#9;&#9;&#9;|&#9;Pj&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;|&#10;|&#9;False&#9;&#9;&#9;|&#9;False&#9;&#9;&#9;|&#9;X&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;|&#10;&#10;Let's analyze the mechanism on the basis of the requirements.&#10;&#10;Mutual Exclusion:&#10;In interested variable mechanism, if one process is interested in getting into the CPU then the other process will wait until it becomes uninterested. Therefore, more than one process can never be present in the critical section at the same time hence the mechanism guarantees mutual exclusion.&#10;&#10;Progress:&#10;In this mechanism, if a process is not interested in getting into the critical section then it will not stop the other process from getting into the critical section. Therefore the progress will definitely be provided by this method.&#10;&#10;Architectural Neutrality:&#10;The mechanism is a complete software mechanism executed in the user mode therefore it guarantees portability or architectural neutrality.&#10;&#10;Bounded Waiting:&#10;It is a busy waiting solution which keeps the CPU busy when the process is actually waiting.It suffers from deadlock.Since it suffers from deadlock, it does not guarantee bounded waiting.&#10;" wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font name="Verdana Italic" size="14.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </TextArea>
+            <Button layoutX="951.0" layoutY="472.0" mnemonicParsing="false" onAction="#backToIndex" text="Back" />
+         </children>
+      </AnchorPane>
+   </center>
+   <top>
+      <Label alignment="CENTER" prefHeight="60.0" prefWidth="1022.0" style="-fx-background-color: #009688;" text="Interested Variable" textFill="WHITE" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="Verdana Bold" size="36.0" />
+         </font>
+      </Label>
+   </top>
+</BorderPane>
