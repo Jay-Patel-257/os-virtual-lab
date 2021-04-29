@@ -41,13 +41,13 @@ public class Compare implements Initializable{
 	public void initialize(URL url, ResourceBundle rb) {
 		
 		final ObservableList<Data> data = FXCollections.observableArrayList(
-			new Data("Lock Variable", "✖", "✖", "✔", "✖"),
-			new Data("Test and Set Lock", "✔", "✖", "✔", "✖"),
-			new Data("Turn Variable", "✔", "✔", "✖", "✖"),
-			new Data("Interested Variable", "✔", "✖", "✔", "✔"),
-			new Data("Peterson's Algorithm", "✔", "✔", "✔", "✖"),
-			new Data("Binary Semaphore", "✔", "✔", "✔", "✖"),
-			new Data("Counting Semaphore", "✔", "✔", "✖", "✖")
+				new Data("Lock Variable", "✖", "✖", "✔", "✖"),
+				new Data("Test and Set Lock", "✔", "✖", "✔", "✖"),
+				new Data("Turn Variable", "✔", "✔", "✖", "✖"),
+				new Data("Interested Variable", "✔", "✖", "✔", "✔"),
+				new Data("Peterson's Algorithm", "✔", "✔", "✔", "✖"),
+				new Data("Binary Semaphore", "✔", "✔", "✔", "✖"),
+				new Data("Counting Semaphore", "✔", "✔", "✖", "✖")
 		);
 		
 		algo.setCellValueFactory(new PropertyValueFactory<Data,String>("algo"));

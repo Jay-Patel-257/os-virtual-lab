@@ -49,8 +49,7 @@ public class Bankers extends Application{
 	static TextArea txtOutput = new TextArea("");
 	static Label lblOutput = new Label("Safe Sequence");
 	static Label lblResult = new Label("");
-	static TextArea tfInstructions = new TextArea("Hi");
-	
+	static TextArea tfInstructions = new TextArea("You have provided the number of Resources!\nYou need to add processes one by one in two steps for each process.\nEach process will have Allocated resources and Max resourses.\nAfter filling the fields press \"Add Process\"\nRepeat the same steps for adding each process.\nThen enter the available resources and press \"Calculate\"\nRest will be done itself!");                                       
 	private TableView tableAllocation = new TableView();
 	private TableView tableMax = new TableView();
 	private TableView tableNeed = new TableView();
@@ -243,7 +242,7 @@ public class Bankers extends Application{
 			}
 		});
 	
-		Label lblResources = new Label("No. of Resources: :)");
+		Label lblResources = new Label("No. of Resources:");
 		lblResources.setPadding(new Insets(0,2,8,10));
 		lblResources.setFont(Font.font("Verdana",FontWeight.BOLD, 15.0));
 		TextField nResources = new TextField();
